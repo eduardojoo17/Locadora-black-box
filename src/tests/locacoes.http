@@ -1,0 +1,26 @@
+GET http://localhost:3000/api/locacoes
+
+###
+
+POST http://localhost:3000/api/locacoes
+Content-Type: application/json
+
+{
+    "dataLocacao":"2026-05-10",
+    "dataDevolucaoPrevista":"2026-05-17",
+    "produtos": {
+        "id": 5
+    }
+}
+
+
+###
+
+PATCH  http://localhost:3000/api/locacoes/3
+Content-Type: application/json
+
+{
+    
+    "dataDevolucaoReal": "2026-05-17"
+     
+}

@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Locacoes } from "./Locacoes.js";
 
 export enum Status {
   DISP = "disponivel",
@@ -19,6 +20,9 @@ export class Produtos {
   @Column({ type: "enum", enum: Status, default: Status.DISP })
   status!: Status;
 
-  @Column("int")
+  @Column({ type: "numeric", precision: 10, scale: 2 })
   preco_diaria!: number;
+
+  @OneToMany(() => Locacoes, (locacao) => locacao.produtos)
+  locacoes: Locacoes[];
 }

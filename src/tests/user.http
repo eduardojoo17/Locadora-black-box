@@ -1,0 +1,29 @@
+GET http://localhost:3000/api/user
+
+###
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "name": "edbabab5",
+    "cpf":"999.999.00000",
+    "contato": "99999-9999",
+    "endereco":"rua ola"
+    
+}
+
+###
+DELETE http://localhost:3000/api/user/6
+
+
+###
+
+PATCH  http://localhost:3000/api/user/8
+Content-Type: application/json
+
+{
+   "name": "lucas",
+    "cpf":"999.999.999-99",
+    "contato": "99999-9999",
+    "endereco":"rua seilt"
+}
