@@ -1,0 +1,31 @@
+GET http://localhost:3000/api/produto
+
+###
+
+POST http://localhost:3000/api/produto
+Content-Type: application/json
+
+{
+    "titulo":"fkfjkdajd",
+    "categoria":"games",
+   // "status":"alugado",
+    "preco_diaria": 2.50
+    
+}
+
+###
+DELETE http://localhost:3000/api/produto/4
+
+
+###
+
+PATCH  http://localhost:3000/api/produto/2
+Content-Type: application/json
+
+{
+    "titulo":"the witcher 3",
+    "categoria":"games",
+    "status":"disponivel",
+    "preco_diaria": 2.50
+     
+}
