@@ -1,4 +1,3 @@
-import { error } from "node:console";
 import { AppDataSource } from "../data-source.js";
 import { Produtos } from "../entity/Produtos.js";
 
