@@ -1,43 +1,44 @@
+import { NextFunction, Request, Response } from "express";
 import { UserService } from "../services/UserServices";
 
-export class UserController { 
+export class UserController {
   private userService = new UserService();
 
-  create = async (req: any, res: any) => { 
-    try { 
-      const user = await this.userService.create(req.body); //
-      res.status(201).json(user); 
-    } catch (error) {
-      res.status(400).json({ error: 'Erro ao criar usuário' });
+  create = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const user = await this.userService.create(req.body);
+      res.status(201).json(user);
+    } catch (error: unknown) {
+      next(error);
     }
   };
 
-  list = async (req: any, res: any) => {
+  list = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const users = await this.userService.list();
       res.status(200).json(users);
-    } catch (error) {
-      res.status(400).json({ error: 'Erro ao listar usuários' });
+    } catch (error: unknown) {
+      next(error);
     }
   };
 
-  update = async (req: any, res: any) => {
+  update = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const id = parseInt(req.params.id);
+      const id = Number(req.params.id);
       const user = await this.userService.update(id, req.body);
-      res.status(200).json(user);
-    } catch (error) {
-      res.status(400).json({ error: 'Erro ao atualizar usuário' });
+      return res.status(200).json(user);
+    } catch (error: unknown) {
+      next(error);
     }
   };
 
-  delete = async (req: any, res: any) => {
+  delete = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const id = parseInt(req.params.id);
+      const id = Number(req.params.id);
       const result = await this.userService.delete(id);
       res.status(200).json(result);
-    } catch (error) {
-      res.status(400).json({ error: 'Erro ao deletar usuário' });
+    } catch (error: unknown) {
+      next(error);
     }
   };
 }
