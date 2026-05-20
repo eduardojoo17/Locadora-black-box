@@ -1,0 +1,45 @@
+//jwt  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MjM0NTQ5LCJleHAiOjE3NzkyNjMzNDl9.wkqR-MQ5gUc0a3ebkOYC17oSEGW5IJCay0joeeFG038
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6ImZ1bmNpb25hcmlvIiwiaWF0IjoxNzc5MjM1NTQ0LCJleHAiOjE3NzkyNjQzNDR9.ZEBGJssmOqrejz0fG-xrvY-U5MruQZRuM3e-vBDhSGA
+
+
+### Criar admin
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "nome": "Admin",
+  "email": "admin@locadora.com",
+  "senha": "123456",
+  "role": "admin"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@locadora.com",
+  "senha": "123456"
+}
+
+###
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MjM0NTQ5LCJleHAiOjE3NzkyNjMzNDl9.wkqR-MQ5gUc0a3ebkOYC17oSEGW5IJCay0joeeFG038
+
+{
+  "nome": "Funcionario Teste",
+  "email": "func2@locadora.com",
+  "senha": "123456",
+  "role": "funcionario"
+}
+
+
+### Login funcionario
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "func2@locadora.com",
+  "senha": "123456"
+}

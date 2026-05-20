@@ -1,11 +1,12 @@
 import { Router } from "express";
 import { UserController } from "../controller/UserController";
+import { adminMiddleware } from "../midlleware/adminMiddleware";
 const router = Router();
 const userController = new UserController();
 
 router.post("/", userController.create);
 router.get("/", userController.list);
 router.patch("/:id", userController.update);
-router.delete("/:id", userController.delete);
+router.delete("/:id", adminMiddleware, userController.delete);
 
 export const UserRoutes = router;
