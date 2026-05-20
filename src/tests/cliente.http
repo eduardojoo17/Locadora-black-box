@@ -1,8 +1,12 @@
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzE0NDk2LCJleHAiOjE3NzkzNDMyOTZ9.PL-c0qD1p8P_ARbndESzb-SgYCthM8bXotVWo_VosCI
+
 GET http://localhost:3000/api/cliente
+Authorization: Bearer {{token}}
 
 ###
 POST http://localhost:3000/api/cliente
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "nome":"tohods",
@@ -13,13 +17,15 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/cliente/2
+DELETE http://localhost:3000/api/cliente/1
+Authorization: Bearer {{token}}
 
 
 ###
 
-PATCH  http://localhost:3000/api/cliente/2
+PATCH  http://localhost:3000/api/cliente/1
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
    "nome": "felipe",

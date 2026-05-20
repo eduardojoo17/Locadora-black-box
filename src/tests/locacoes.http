@@ -1,9 +1,14 @@
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzE0NDk2LCJleHAiOjE3NzkzNDMyOTZ9.PL-c0qD1p8P_ARbndESzb-SgYCthM8bXotVWo_VosCI
+
 GET http://localhost:3000/api/locacoes
+Authorization: Bearer {{token}}
+
 
 ###
 
 POST http://localhost:3000/api/locacoes
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "dataLocacao":"2026-05-10",
@@ -21,6 +26,7 @@ Content-Type: application/json
 
 PATCH  http://localhost:3000/api/locacoes/3
 Content-Type: application/json
+
 
 {
     
