@@ -26,3 +26,9 @@ export class NotFoundError extends ApiError {
     super(message, 404);
   }
 }
+
+export class ConflictError extends ApiError {
+  constructor(message: string) {
+    super(message, 409);
+  }
+}

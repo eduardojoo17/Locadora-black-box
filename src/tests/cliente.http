@@ -1,28 +1,28 @@
-GET http://localhost:3000/api/user
+GET http://localhost:3000/api/cliente
 
 ###
-POST http://localhost:3000/api/user
+POST http://localhost:3000/api/cliente
 Content-Type: application/json
 
 {
-    "name":"Alan",
-    "cpf":"999.999.00000",
+    "nome":"tohods",
+    "cpf":"999.777.55555",
     "contato": "99999-9999",
     "endereco":"rua ola"
     
 }
 
 ###
-DELETE http://localhost:3000/api/user/99999
+DELETE http://localhost:3000/api/cliente/2
 
 
 ###
 
-PATCH  http://localhost:3000/api/user/2
+PATCH  http://localhost:3000/api/cliente/2
 Content-Type: application/json
 
 {
-   "name": " Bruno",
+   "nome": "felipe",
     "cpf":"999.999.999-99",
     "contato": "99999-9999",
     "endereco":"rua seilt"

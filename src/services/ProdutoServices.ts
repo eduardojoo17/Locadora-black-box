@@ -25,6 +25,7 @@ export class ProdutoService {
   delete = async (id: number) => {
     const produto = await this.produtoRepository.findOneBy({ id });
     if (!produto) throw new Error("produto não encontrado");
-    return await this.produtoRepository.delete(id);
+    await this.produtoRepository.delete(id);
+    return { message: "Produto deletado com sucesso" };
   };
 }
