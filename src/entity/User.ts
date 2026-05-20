@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Locacoes } from "./Locacoes";
-// import { IsNotEmpty, IsString } from 'class-validator'; vamos adicionar a validação de campos obrigatórios
+import{ IsNotEmpty, IsString } from 'class-validator'; 
 
 @Entity()
 export class User {
@@ -8,17 +8,24 @@ export class User {
   id!: number;
 
   @Column("varchar")
-  // @IsNotEmpty({ message: 'O nome é obrigatório' })
-  //@IsString({ message: 'O nome deve ser uma string' })
+  @IsNotEmpty({ message: 'O nome é obrigatório' })
+  @IsString({ message: 'O nome deve ser uma string' })
   name!: string;
 
+  
   @Column("varchar")
+  @IsNotEmpty({ message: 'O CPF é obrigatório' })
+  @IsString({ message: 'O CPF deve ser uma string' })
   cpf!: string;
 
   @Column("varchar")
+  @IsNotEmpty({ message: 'O contato é obrigatório' })
+  @IsString({ message: 'O contato deve ser uma string' })
   contato!: string;
 
   @Column("varchar")
+  @IsNotEmpty({ message: 'O endereço é obrigatório' })
+  @IsString({ message: 'O endereço deve ser uma string' })
   endereco!: string;
 
   @OneToMany(() => Locacoes, (locacao) => locacao.usuario)
