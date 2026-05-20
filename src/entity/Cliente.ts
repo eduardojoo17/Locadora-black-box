@@ -27,6 +27,6 @@ export class Cliente {
   @IsString({ message: "O endereço deve ser uma string" })
   endereco!: string;
 
-  @OneToMany(() => Locacoes, (locacao) => locacao.usuario)
+  @OneToMany(() => Locacoes, (locacao) => locacao.cliente)
   locacoes: Locacoes[];
 }

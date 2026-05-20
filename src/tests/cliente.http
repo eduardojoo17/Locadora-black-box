@@ -1,11 +1,17 @@
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzE0NDk2LCJleHAiOjE3NzkzNDMyOTZ9.PL-c0qD1p8P_ARbndESzb-SgYCthM8bXotVWo_VosCI
+
+//@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImZ1bmNpb25hcmlvIiwiaWF0IjoxNzc5MzE0NzczLCJleHAiOjE3NzkzNDM1NzN9.zZRpP_2WN_zTy2LeSedNMYIlHeVMSPT3hHKOekqIi9Q
+
 GET http://localhost:3000/api/cliente
+Authorization: Bearer {{token}}
 
 ###
 POST http://localhost:3000/api/cliente
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "nome":"tohods",
+    "nome":"blastoise 22",
     "cpf":"999.777.55555",
     "contato": "99999-9999",
     "endereco":"rua ola"
@@ -13,16 +19,17 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/cliente/2
+DELETE http://localhost:3000/api/cliente/3
+Authorization: Bearer {{token}}
 
 
 ###
-
 PATCH  http://localhost:3000/api/cliente/2
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-   "nome": "felipe",
+   "nome": "charizard",
     "cpf":"999.999.999-99",
     "contato": "99999-9999",
     "endereco":"rua seilt"

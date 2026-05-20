@@ -1,5 +1,5 @@
 {
-  "name": "inventory-api",
+  "name": "locadora-black-box",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
     "class-validator": "^0.15.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
@@ -20,7 +20,7 @@
     "typeorm": "^0.3.28"
   },
   "devDependencies": {
-    "@types/bcrypt": "^6.0.0",
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.5.0",

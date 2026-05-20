@@ -23,14 +23,6 @@ Content-Type: application/json
 }
 
 
-
-
-
-
-
-
-
-
 ### Logar
 POST http://localhost:3000/api/auth/logar
 Content-Type: application/json

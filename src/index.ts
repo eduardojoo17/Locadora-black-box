@@ -7,7 +7,7 @@ import { locacoesRoutes } from "./routes/locacoesRoutes.js";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import { authRoutes } from "./routes/authRoutes.js";
 import { verificar } from "./middlewares/authMiddleware.js";
-import { somenteAdmin } from "./middlewares/authMiddleware.js";
+
 
 const app: Application = express();
 const port = process.env.PORT || 3000;
