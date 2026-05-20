@@ -5,7 +5,7 @@ POST http://localhost:3000/api/user
 Content-Type: application/json
 
 {
-    "name": "edbabab5",
+    "name":"Alan",
     "cpf":"999.999.00000",
     "contato": "99999-9999",
     "endereco":"rua ola"
@@ -13,16 +13,16 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/user/6
+DELETE http://localhost:3000/api/user/99999
 
 
 ###
 
-PATCH  http://localhost:3000/api/user/8
+PATCH  http://localhost:3000/api/user/2
 Content-Type: application/json
 
 {
-   "name": "lucas",
+   "name": " Bruno",
     "cpf":"999.999.999-99",
     "contato": "99999-9999",
     "endereco":"rua seilt"
