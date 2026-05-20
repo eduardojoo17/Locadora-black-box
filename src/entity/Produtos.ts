@@ -27,7 +27,6 @@ export class Produtos {
 
   @Column({ type: "numeric", precision: 10, scale: 2 })
   @IsNotEmpty({ message: "O preço diário é obrigatório" })
-  @IsNumber({}, { message: "O preço diário deve ser um número" })  
   preco_diaria!: number;
 
   @OneToMany(() => Locacoes, (locacao) => locacao.produtos)

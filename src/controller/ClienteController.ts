@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from "express";
-import { UserService } from "../services/UserServices";
+import { ClienteService } from "../services/ClienteServices.js";
 
-export class UserController {
-  private userService = new UserService();
+export class ClienteController {
+  private clienteService = new ClienteService();
 
   create = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const user = await this.userService.create(req.body);
-      res.status(201).json(user);
+      const cliente = await this.clienteService.create(req.body);
+      res.status(201).json(cliente);
     } catch (error: unknown) {
       next(error);
     }
@@ -15,8 +15,8 @@ export class UserController {
 
   list = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const users = await this.userService.list();
-      res.status(200).json(users);
+      const cliente = await this.clienteService.list();
+      res.status(200).json(cliente);
     } catch (error: unknown) {
       next(error);
     }
@@ -25,8 +25,8 @@ export class UserController {
   update = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = Number(req.params.id);
-      const user = await this.userService.update(id, req.body);
-      return res.status(200).json(user);
+      const cliente = await this.clienteService.update(id, req.body);
+      return res.status(200).json(cliente);
     } catch (error: unknown) {
       next(error);
     }
@@ -35,7 +35,7 @@ export class UserController {
   delete = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = Number(req.params.id);
-      const result = await this.userService.delete(id);
+      const result = await this.clienteService.delete(id);
       res.status(200).json(result);
     } catch (error: unknown) {
       next(error);

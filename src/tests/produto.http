@@ -1,12 +1,20 @@
-GET http://localhost:3000/api/produto
+#admin
+//@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzAwODU4LCJleHAiOjE3NzkzMjk2NTh9.CTqHsIk3NQMqlqPYxGxZb9GAyY7a8_wmhgZ2NjWPpEw
 
+#funcionario
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImZ1bmNpb25hcmlvIiwiaWF0IjoxNzc5MzAxMTEzLCJleHAiOjE3NzkzMjk5MTN9.lTDCAoP0Aro6doEkycnRfBFUQ_0Qg2C6k2bZvlYqY18
+
+###
+GET http://localhost:3000/api/produto
+Authorization: Bearer {{token}}
 ###
 
 POST http://localhost:3000/api/produto
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "titulo":"fkfjkdajd",
+    "titulo":"olau",
     "categoria":"games",
    // "status":"alugado",
     "preco_diaria": 2.50
@@ -14,16 +22,17 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/api/produto/4
-
+DELETE http://localhost:3000/api/produto/6
+Authorization: Bearer {{token}}
 
 ###
 
-PATCH  http://localhost:3000/api/produto/2
+PATCH  http://localhost:3000/api/produto/7
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-    "titulo":"the witcher 3",
+    "titulo":"the witcher 2",
     "categoria":"games",
     "status":"disponivel",
     "preco_diaria": 2.50

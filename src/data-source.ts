@@ -1,8 +1,9 @@
 import "reflect-metadata";
 import { DataSource, type DataSourceOptions } from "typeorm";
-import { User } from "./entity/User";
-import { Produtos } from "./entity/Produtos";
-import { Locacoes } from "./entity/Locacoes";
+import { Cliente } from "./entity/Cliente.js";
+import { Produtos } from "./entity/Produtos.js";
+import { Locacoes } from "./entity/Locacoes.js";
+import { Funcionario } from "./entity/Funcionario.js";
 
 const options: DataSourceOptions = {
   type: (process.env.DB_TYPE as "postgres") || "postgres",
@@ -13,7 +14,7 @@ const options: DataSourceOptions = {
   database: process.env.DB_DATABASE,
   synchronize: true,
   logging: true,
-  entities: [User, Produtos, Locacoes],
+  entities: [Cliente, Produtos, Locacoes, Funcionario],
   migrations: [],
   subscribers: [],
 };

@@ -9,7 +9,10 @@ Content-Type: application/json
     "dataLocacao":"2026-05-10",
     "dataDevolucaoPrevista":"2026-05-17",
     "produtos": {
-        "id": 5
+        "id": 6
+    },
+    "usuario":{
+        "id":2
     }
 }
 

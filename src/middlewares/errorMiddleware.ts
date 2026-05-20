@@ -1,12 +1,12 @@
 import type { NextFunction, Request, Response } from "express";
-import type { ApiError } from "../helpers/apiError";
+import type { ApiError } from "../helpers/apiError.js";
 import type { ValidationError } from "class-validator";
 
 export const errorMiddleware = (
   error: Error & Partial<ApiError> & ValidationError[],
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   console.error("ErrorMiddleware:", error);
   if (Array.isArray(error.errors) && error.errors[0]?.constraints) {
