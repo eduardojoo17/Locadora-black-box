@@ -33,7 +33,7 @@ O projeto visa organizar o acervo de filmes, séries e games para uma locadora, 
 ## 4. Regras de Negócio (RN)
 
 - _RN01_ - Não é permitido excluir um produto que tenha aluguel vinculados.
-- _RN02_ - O CPF do cliente deve ter no mínimo 11 caracteres.
+- _RN02_ - O CPF do cliente deve ter no mínimo 14 caracteres.
 - _RN03_ - Os produtos só podem ser alugados para clientes cadastrados.
 - _RN04_ - Deve haver um histórico dos produtos alugados.
-- _RN05_ - Caso o prazo de devolução seja excedido será renovado a locação.
+- _RN05_ - Caso o prazo de devolução seja excedido será renovado a data de locação final.
