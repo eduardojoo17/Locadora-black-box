@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express from "express";
 import type { Application } from "express";
 import { AppDataSource } from "./data-source.js";

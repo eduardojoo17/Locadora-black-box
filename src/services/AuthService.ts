@@ -36,4 +36,8 @@ export class AuthService {
 
     return { token };
   };
+  
+  list = async () => {
+    return await this.funcRepository.find();
+  };
 }

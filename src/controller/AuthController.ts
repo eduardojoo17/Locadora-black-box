@@ -25,5 +25,15 @@ registrar = async(req: Request, res: Response, next: NextFunction) => {
         } catch (error) {
             next(error);
         }
+  };
+  
+  //lista os funcionarios
+  list = async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const funcionario = await this.authService.list();
+        res.status(200).json(funcionario);
+      } catch (error: unknown) {
+        next(error);
+      }
     };
 }
