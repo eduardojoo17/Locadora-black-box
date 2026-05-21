@@ -4,7 +4,8 @@ import {Router, } from "express";
 const router = Router();
 const authController = new AuthController();
 
-router.post("/",authController.registrar);
-router.post("/",authController.logar);
+router.get("/", authController.list);
+router.post("/registrar",authController.registrar);
+router.post("/logar",authController.logar);
 
 export const authRoutes = router;
