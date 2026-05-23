@@ -51,7 +51,7 @@ O sistema é voltado ao **funcionário da locadora**, que é o usuário do siste
 ##  Regras de Negócio
 
 - Não é permitido excluir um produto que possua locações vinculadas
-- O CPF do cliente deve ter no mínimo 11 caracteres
+- O CPF do cliente deve ter no mínimo 14 caracteres
 - Produtos só podem ser alugados para clientes cadastrados
 - Histórico de locações é mantido permanentemente
 - Caso o prazo de devolução seja excedido, será renovado a data de locação final
