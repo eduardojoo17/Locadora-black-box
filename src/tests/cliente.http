@@ -1,5 +1,5 @@
 //admin
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzE0NDk2LCJleHAiOjE3NzkzNDMyOTZ9.PL-c0qD1p8P_ARbndESzb-SgYCthM8bXotVWo_VosCI
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgwNzk4NjAwLCJleHAiOjE3ODA4Mjc0MDB9.Tp-PJvSmKH0OMIQVDlKbp9GnIQByeSe8vXfPwOvDozA
 
 //fun
 //@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImZ1bmNpb25hcmlvIiwiaWF0IjoxNzc5MzE0NzczLCJleHAiOjE3NzkzNDM1NzN9.zZRpP_2WN_zTy2LeSedNMYIlHeVMSPT3hHKOekqIi9Q
@@ -14,7 +14,7 @@ Authorization: Bearer {{token}}
 
 {
     "nome":"blastoise 33",
-    "cpf":"999.999.999-10",
+    "cpf":"163.417.557-32",
     "contato": "99999-9999",
     "endereco":"rua ola"
     

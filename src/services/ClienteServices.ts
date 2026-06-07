@@ -6,13 +6,17 @@ import { BadRequestError, NotFoundError } from "../helpers/apiError.js";
 export class ClienteService {
   private clienteRepository = AppDataSource.getRepository(Cliente);
 
-  create = async (cliente: Partial<Cliente>) => {
+  create = async (cliente: {
+    nome: string;
+    cpf: string;
+    contato: string;
+    endereco: string;
+  }) => {
     const ncliente = this.clienteRepository.create(cliente);
     const errors = await validate(ncliente);
     if (errors.length > 0) {
       throw new BadRequestError("Falha de validação", errors);
     }
-
     return await this.clienteRepository.save(ncliente);
   };
 

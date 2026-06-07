@@ -15,7 +15,6 @@ export class AuthService {
   }) => {
     const existe = await this.funcRepository.findOneBy({ email: dados.email });
     if (existe) throw new ConflictError("email já cadastrado");
-
     const hash = await bcrypt.hash(dados.senha, 4);
     const funcionario = this.funcRepository.create({ ...dados, senha: hash });
     return await this.funcRepository.save(funcionario);
@@ -36,7 +35,7 @@ export class AuthService {
 
     return { token };
   };
-  
+
   list = async () => {
     return await this.funcRepository.find();
   };
