@@ -1,5 +1,5 @@
 #admin
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MzAwODU4LCJleHAiOjE3NzkzMjk2NTh9.CTqHsIk3NQMqlqPYxGxZb9GAyY7a8_wmhgZ2NjWPpEw
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgwNzk4NjAwLCJleHAiOjE3ODA4Mjc0MDB9.Tp-PJvSmKH0OMIQVDlKbp9GnIQByeSe8vXfPwOvDozA
 
 #funcionario
 //@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImZ1bmNpb25hcmlvIiwiaWF0IjoxNzc5MzAxMTEzLCJleHAiOjE3NzkzMjk5MTN9.lTDCAoP0Aro6doEkycnRfBFUQ_0Qg2C6k2bZvlYqY18
@@ -14,7 +14,7 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "titulo":"olau",
+    "titulo":"tc",
     "categoria":"games",
    // "status":"alugado",
     "preco_diaria": 2.50
@@ -27,12 +27,12 @@ Authorization: Bearer {{token}}
 
 ###
 
-PATCH  http://localhost:3000/api/produto/7
+PATCH  http://localhost:3000/api/produto/13
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "titulo":"the witcher 2",
+    "titulo":"the witcher 4",
     "categoria":"games",
     "status":"disponivel",
     "preco_diaria": 2.50

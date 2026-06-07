@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Locacoes } from "./Locacoes.js";
 import { IsNotEmpty, IsString, Length } from "class-validator";
+import { IsCPF } from "../decorator/isCpf.js";
 
 @Entity()
 export class Cliente {
@@ -14,7 +15,7 @@ export class Cliente {
 
   @Column("varchar")
   @IsNotEmpty({ message: "O CPF é obrigatório" })
-  @Length(14, 14, { message: "O CPF deve conter exatamente 14 caracteres incluindo '.' e '-' " })
+  @IsCPF({ message: "insira um cpf valido" })
   cpf!: string;
 
   @Column("varchar")
